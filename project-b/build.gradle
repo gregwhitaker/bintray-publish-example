@@ -5,5 +5,5 @@ plugins {
 sourceCompatibility = 1.8
 
 dependencies {
-    compile project(':project-c')
+    compile project(':project-common')
 }
