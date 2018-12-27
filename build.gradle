@@ -2,7 +2,7 @@ buildscript {
     repositories {
         jcenter()
     }
-    
+
     dependencies {
         classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.+"
     }
@@ -26,9 +26,5 @@ subprojects {
     repositories {
         jcenter()
         mavenCentral()
-    }
-
-    ext {
-
     }
 }
