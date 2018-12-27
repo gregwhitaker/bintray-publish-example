@@ -8,7 +8,7 @@ Run the following command to build the example:
     ./gradlew clean build
     
 ## Publishing the Example
-The example is setup to publish automatically, via [TravisCI](https://www.travisci.org) when you create a release tag on the master branch.
+The example is setup to publish automatically, via [TravisCI](https://www.travisci.org), when you create a release tag on the master branch.
 
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/bintray-publish-example/issues).
