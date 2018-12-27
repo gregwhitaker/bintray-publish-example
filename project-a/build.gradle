@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-sourceCompatibility = 1.8
+apply from: "${rootProject.projectDir}/gradle/java.gradle"
 
 dependencies {
     compile project(':project-common')
