@@ -2,6 +2,14 @@
 
 An example of publishing a multi-module Gradle build to [Bintray](https://bintray.com/) and syncing the published artifacts to [Maven Central](https://search.maven.org/).
 
+## Building the Example
+Run the following command to build the example:
+
+    ./gradlew clean build
+    
+## Publishing the Example
+The example is setup to publish automatically, via [TravisCI](https://www.travisci.org) when you create a release tag on the master branch.
+
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/bintray-publish-example/issues).
 
