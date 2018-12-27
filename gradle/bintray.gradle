@@ -22,7 +22,7 @@ bintray {
                 sync = true
                 user = project.hasProperty('sonatypeUser') ? project.property('sonatypeUser') : System.getenv('SONATYPE_USER')
                 password = project.hasProperty('sonatypePassword') ? project.property('sonatypePassword') : System.getenv('SONATYPE_PASSWORD')
-                close = '1' //Optional property. By default the staging repository is closed and artifacts are released to Maven Central. You can optionally turn this behaviour off (by puting 0 as value) and release the version manually.
+                close = '1' //Optional property. By default the staging repository is closed and artifacts are released to Maven Central. You can optionally turn this behaviour off (by putting 0 as value) and release the version manually.
             }
         }
     }
