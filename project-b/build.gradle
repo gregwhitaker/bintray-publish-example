@@ -13,6 +13,7 @@ plugins {
 }
 
 apply from: "${rootProject.projectDir}/gradle/java.gradle"
+apply from: "${rootProject.projectDir}/gradle/bintray.gradle"
 
 dependencies {
     compile project(':project-common')
