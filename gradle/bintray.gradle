@@ -1,0 +1,29 @@
+apply plugin: 'com.jfrog.bintray'
+
+bintray {
+    user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintrayKey') ? project.property('bintrayKey') : System.getenv('BINTRAY_KEY')
+    publications = ['mavenJava']
+    publish = true
+
+    pkg {
+        repo = 'maven'
+        name = project.name
+        userOrg = 'gregwhitaker'
+        desc = project.description
+        websiteUrl = 'https://github.com/gregwhitaker/bintray-publish-example'
+        issueTrackerUrl = 'https://github.com/gregwhitaker/bintray-publish-example/issues'
+        vcsUrl = 'https://github.com/gregwhitaker/bintray-publish-example.git'
+        licenses = ['MIT']
+        githubRepo = 'gregwhitaker/bintray-publish-example'
+
+        version {
+            mavenCentralSync {
+                sync = true
+                user = project.hasProperty('sonatypeUser') ? project.property('sonatypeUser') : System.getenv('SONATYPE_USER')
+                password = project.hasProperty('sonatypePassword') ? project.property('sonatypePassword') : System.getenv('SONATYPE_PASSWORD')
+                close = '1' //Optional property. By default the staging repository is closed and artifacts are released to Maven Central. You can optionally turn this behaviour off (by puting 0 as value) and release the version manually.
+            }
+        }
+    }
+}

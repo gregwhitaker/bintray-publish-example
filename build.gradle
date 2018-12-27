@@ -23,6 +23,9 @@ buildScan {
 subprojects {
     apply plugin: 'net.saliman.properties'
 
+    // Adds a version qualifier to the end of the version (i.e. SNAPSHOT, RC)
+    project.version += rootProject.hasProperty('versionQualifier') ? '-' + rootProject.property('versionQualifier') : ''
+
     repositories {
         jcenter()
         mavenCentral()

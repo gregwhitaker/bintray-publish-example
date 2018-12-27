@@ -1,2 +1,4 @@
 apply from: "${rootProject.projectDir}/gradle/java.gradle"
 apply from: "${rootProject.projectDir}/gradle/bintray.gradle"
+
+description = 'Common library of the Bintray Publish Example'
