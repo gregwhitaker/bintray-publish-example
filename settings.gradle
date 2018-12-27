@@ -1,0 +1,5 @@
+rootProject.name = 'bintray-publish-example'
+include 'project-a'
+include 'project-b'
+include 'project-c'
+
