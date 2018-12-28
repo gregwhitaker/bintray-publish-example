@@ -5,13 +5,13 @@ buildscript {
 
     dependencies {
         classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.+"
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4"
     }
 }
 
 plugins {
     id 'com.gradle.build-scan' version '2.1'
     id 'net.saliman.properties' version '1.4.6'
-    id 'com.jfrog.bintray' version '1.8.4'
 }
 
 buildScan {

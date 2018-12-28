@@ -4,7 +4,9 @@ bintray {
     user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
     key = project.hasProperty('bintrayKey') ? project.property('bintrayKey') : System.getenv('BINTRAY_KEY')
     publications = ['mavenJava']
-    publish = true
+
+    dryRun = true
+    publish = false
 
     pkg {
         repo = 'maven'
