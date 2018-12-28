@@ -5,21 +5,33 @@ bintray {
     key = project.hasProperty('bintrayKey') ? project.property('bintrayKey') : System.getenv('BINTRAY_KEY')
     publications = ['mavenJava']
 
-    dryRun = false
+    dryRun = false      // true if you want to run the publish without publishing artifacts
     publish = true
+    override = false    // true if you want to override existing versions in bintray
 
     pkg {
         repo = 'maven'
         name = project.name
         userOrg = 'gregwhitaker'
         desc = project.description
+
         websiteUrl = 'https://github.com/gregwhitaker/bintray-publish-example'
         issueTrackerUrl = 'https://github.com/gregwhitaker/bintray-publish-example/issues'
         vcsUrl = 'https://github.com/gregwhitaker/bintray-publish-example.git'
+
         licenses = ['MIT']
+
         githubRepo = 'gregwhitaker/bintray-publish-example'
 
         version {
+            name = project.version
+            released = new Date()
+            vcsTag = project.version
+
+            gpg {
+                sign = true
+            }
+
             mavenCentralSync {
                 sync = true
                 user = project.hasProperty('sonatypeUser') ? project.property('sonatypeUser') : System.getenv('SONATYPE_USER')

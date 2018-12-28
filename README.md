@@ -11,6 +11,10 @@ Run the following command to build the example:
 ## Publishing the Example
 The example is setup to publish automatically, via [TravisCI](https://travis-ci.org/), when you create a release tag on the master branch.
 
+The first publish will always fail as there is no way to sync to Maven Central without first syncing the Bintray repository with JCenter. After the first
+failed publish, login to Bintray and click the "Sync with JCenter" button in each of the repositories you are trying to publish. Once Bintray support has
+approved the request you should be able to sync with Maven Central.
+
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/bintray-publish-example/issues).
 
