@@ -6,7 +6,7 @@ bintray {
     publications = ['mavenJava']
 
     dryRun = false      // true if you want to run the publish without publishing artifacts
-    publish = true
+    publish = true      // false if you only want to stage the artifacts and then publish manually in bintray
     override = false    // true if you want to override existing versions in bintray
 
     pkg {
