@@ -13,10 +13,7 @@ elif [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_TAG" == "" ] && [ "$bin
 elif [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_TAG" != "" ] && [ "$bintrayUser" != "" ] ; then
 
     echo -e "Building Tag $TRAVIS_REPO_SLUG/$TRAVIS_TAG"
-    ./gradlew \
-        -PbintrayUser="${bintrayUser}" -PbintrayKey="${bintrayKey}" \
-        -PsonatypeUser="${sonatypeUser}" -PsonatypePassword="${sonatypePassword}" \
-        clean build bintrayUpload --stacktrace
+    ./gradlew -PbintrayUser="${bintrayUser}" -PbintrayKey="${bintrayKey}" -PsonatypeUser="${sonatypeUser}" -PsonatypePassword="${sonatypePassword}" clean build bintrayUpload --stacktrace
 
 else
 
