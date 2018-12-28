@@ -15,6 +15,12 @@ The first publish will always fail as there is no way to sync to Maven Central w
 failed publish, login to Bintray and click the "Sync with JCenter" button in each of the repositories you are trying to publish. Once Bintray support has
 approved the request you should be able to sync with Maven Central.
 
+If you want to publish locally, run the following command:
+
+    ./gradlew -PbintrayUser="bintrayUsername" -PbintrayKey="bintrayKey" \
+              -PsonatypeUser="sonatypeUsername" -PsonatypePassword="sonatypeKey" \
+              clean build bintrayUpload --stacktrace
+
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/bintray-publish-example/issues).
 
