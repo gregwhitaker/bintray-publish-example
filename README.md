@@ -18,7 +18,7 @@ approved the request you should be able to sync with Maven Central.
 If you want to publish locally, run the following command:
 
     ./gradlew -PbintrayUser="bintrayUsername" -PbintrayKey="bintrayKey" \
-              -PsonatypeUser="sonatypeUsername" -PsonatypePassword="sonatypeKey" \
+              -PsonatypeUser="sonatypeUsername" -PsonatypePassword="sonatypePassword" \
               clean build bintrayUpload --stacktrace
 
 ## Bugs and Feedback
