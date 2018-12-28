@@ -1,4 +1,5 @@
 # bintray-publish-example
+[![Build Status](https://travis-ci.org/gregwhitaker/bintray-publish-example.svg?branch=master)](https://travis-ci.org/gregwhitaker/bintray-publish-example)
 
 An example of publishing a multi-module Gradle build to [Bintray](https://bintray.com/) and syncing the published artifacts to [Maven Central](https://search.maven.org/).
 
